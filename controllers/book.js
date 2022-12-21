@@ -28,7 +28,6 @@ router.get('/:id', (req,res) => {
 
 //Post: create a book
 router.post('/', (req,res) => {
-    console.log(req.body)
     db.Book.create(req.body)
     .then ((book) => {
         res.status(200).json(book)
